@@ -46,7 +46,9 @@ class Solution {
                     if (road[i][j-1] != -1) {
                         right = road[i][j-1];
                     }
-                    road[i][j] = down + right;
+                    // 아래 내용을 수정 후 효율성 테스트 정답.
+                    //road[i][j] = down + right;
+                    road[i][j] = (down + right) % 1000000007;
                 }
             }
         }
